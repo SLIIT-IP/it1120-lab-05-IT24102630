@@ -1,0 +1,332 @@
+import java.until.Scanner;
+public class IT24102630lab5Q3 {
+       public static void main(String[] args){
+          int startdate,enddate;
+          double discountrate=0;
+          double chargeperday=480000;
+          double discount3T_4T_Days=0.1;
+          double discount_5T_Days=0.2;
+          
+          Scanner input=new Scanner(System.in);
+          
+          System.out.println("Enter Start Date(1-31): ");
+          startdate=input.nextInt();
+
+          System.out.println("Enter End Date(1-31):  ");
+          enddate=input.nextInt();
+
+          if(startdate<1 || startdate>31 || enddate<1 || enddate>31){
+            System.out.println("Error:Days must be between 1 and 31");
+            return;
+          }
+          if(startdate>=enddate){
+            System.out.println("Error:Start date must be less than end date");
+            return;
+          }
+       
+          int numofreserved=enddate-startdate;
+          if(numofreserved>=3 && numofreserved<=4){
+            discountrate=discount3T_4T_Days;
+          }
+ 
+          else if(numofreserved>=5){
+             discountrate=discount_5T_Days;
+          }
+
+          double amountBeforediscount=numofreserved*chargeperday;
+          double discountAmount= amountBeforediscount*discountrate;
+          double amountToBepaid= amountBeforediscount-discountAmount;
+             System.out.println("Room Charge per Day:"+ chargeperday);
+             System.out.println("Number of Days Reserved:"+ numofreserved);
+             System.out.println("Total Amount To Be Paid: "+ amountToBepaid);
+   }
+}
+             
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+          
