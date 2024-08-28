@@ -1,12 +1,12 @@
 import java.until.Scanner;
 public class IT24102630lab5Q3 {
        public static void main(String[] args){
-          int startdate,enddate;
-          double discountrate=0;
-          double chargeperday=480000;
-          double discount3T_4T_Days=0.1;
-          double discount_5T_Days=0.2;
           
+          final double chargeperday=480000;
+          final double discount3T_4T_Days=0.1;
+          final double discount_5T_Days=0.2;
+          int startdate,enddate; 
+          double discountrate=0;
           Scanner input=new Scanner(System.in);
           
           System.out.println("Enter Start Date(1-31): ");
